@@ -62,4 +62,22 @@ $ git merge update_from_upstream
 $ git push origin main
 ```
 
+### Opening PR
+
+When I did this for the first time, I didn't see a button for opening a PR. (I accidentally opened a PR on upstream.)
+
+- Go to PR tab.
+- Manually select main branch, and update_from_upstream branch.
+- Use squash and merge like usual.
+
+Then update main locally:
+
+```sh
+$ git checkout main
+$ git pull origin main
+$ git branch -D update_from_upstream
+$ git push origin -d update_from_upstream
+```
+
+
 After following this workflow, note any changes here if the existing process doesn't work.
